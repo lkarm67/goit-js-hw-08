@@ -65,14 +65,14 @@ const images = [
     ];
     
 const listOfGallery = images
-    .map(image => `<li class="gallery-item"><a class="gallery-link" href="large-image.jpg"><img class="gallery-image" src="${image.preview}" data-source="${image.original}" alt="${image.description}"/></a></li>`)
+    .map(image => `<li class="gallery-item"><a class="gallery-link" href="${image.original}"><img class="gallery-image" src="${image.preview}" data-source="${image.original}" alt="${image.description}"/></a></li>`)
     .join('');
   
 document.querySelector('.gallery').insertAdjacentHTML('beforeend', listOfGallery);
 
-document.querySelector('.gallery').addEventListener('click', сlickGallery);
+document.querySelector('.gallery').addEventListener('click', clickGallery);
 
-function сlickGallery(event) {
+function clickGallery(event) {
     
     const clickImage = event.target;
         
